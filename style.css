@@ -214,3 +214,57 @@ footer {
   box-shadow: 0 -2px 10px var(--shadow-color);
   transition: background-color 0.5s;
 }
+/* Brand & hamburger for mobile */
+.nav-brand {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: var(--accent-color);
+}
+
+/* Hide menu toggle by default on desktop */
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: var(--text-color);
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: var(--card-bg);
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 10px 0;
+    box-shadow: 0 4px 10px var(--shadow-color);
+    z-index: 9;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  nav .toggle-button {
+    margin-left: auto;
+  }
+}
+
